@@ -1,21 +1,116 @@
-Pulse, Generative AI ChatBot for Youth Mental Wellness
+# AI Chatbot Frontend
 
-About  
-Pulse is a lightweight, youth-friendly platform that turns simple daily inputs, like a word, emoji, or short message, into supportive, relatable advice. It uses a fun Gen-Z tone to improve the experience with aesthetic visuals, creating a mood-based digital journal. This makes mental wellness quick, engaging, and easy to maintain.  
+A modern, responsive AI chatbot interface built using React.js, designed with a clean UI and smooth user experience inspired by ChatGPT and other SaaS products.
 
-Key Features  
-One-Tap Journaling: Share just one word or emoji and receive supportive AI feedback.  
-Gen-Z Tone: Fun, casual, and meme-like responses instead of textbook psychology.  
-Mood-to-Visuals: Creates aesthetic images that match emotions.  
-Mood Map & Streaks: Tracks daily inputs for consistency and progress.  
-Privacy First: No signups or personal data required, making it lightweight and secure.  
+## Overview
 
-Tech Stack  
-Frontend: React, Tailwind-CSS, JavaScript  
-AI Processing: LLM API for text generation  
-Image Generation: Unsplash API  
+This project focuses on building a scalable and production-ready chatbot frontend that interacts with an AI API to generate responses. It demonstrates strong frontend skills, UI/UX design, and API integration.
 
-Future Scope  
-Export mood journal as PDF.  
-Social sharing of entries as aesthetic posts.  
-Integration with music or guided meditation snippets.
+## Features
+
+* **Real-time chat interface**
+* **AI-powered responses** (via API integration)
+* **Clean and modern UI design**
+* **Dark / Light mode support**
+* **Typing indicator animation**
+* **Chat history** (stored locally)
+* **Auto-scroll to latest message**
+* **Responsive design** (mobile + desktop)
+* **Copy message functionality**
+* **Clear chat option**
+
+## Tech Stack
+
+* **Frontend:** React.js (Hooks & Functional Components)
+* **State Management:** Context API
+* **Styling:** Tailwind CSS
+* **API Calls:** Fetch / Axios
+* **Animations:** Framer Motion (optional)
+
+## Project Structure
+
+```text
+src/
+│── components/
+│   ├── Sidebar.jsx
+│   ├── ChatWindow.jsx
+│   ├── MessageBubble.jsx
+│   ├── InputBox.jsx
+│   └── Loader.jsx
+│
+│── context/
+│   └── ChatContext.jsx
+│
+│── services/
+│   └── api.js
+│
+│── hooks/
+│   └── useChat.js
+│
+│── App.jsx
+│── main.jsx
+Installation & Setup
+1. Clone the repository
+
+Bash
+git clone [https://github.com/your-username/ai-chatbot-frontend.git](https://github.com/your-username/ai-chatbot-frontend.git)
+cd ai-chatbot-frontend
+2. Install dependencies
+
+Bash
+npm install
+3. Setup environment variables
+Create a .env file in the root directory:
+
+Code snippet
+VITE_OPENAI_API_KEY=your_api_key_here
+4. Run the project
+
+Bash
+npm run dev
+API Integration
+The chatbot connects to an AI API (such as OpenAI) to generate responses.
+
+Example request structure:
+
+JavaScript
+export const sendMessage = async (message) => {
+  const response = await fetch("API_ENDPOINT", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ message }),
+  });
+  return response.json();
+};
+Deployment
+You can easily deploy this project using:
+
+Vercel
+
+Netlify
+
+Build command:
+
+Bash
+npm run build
+Future Improvements
+Voice input & output
+
+Authentication system
+
+Backend integration (MongoDB / Firebase)
+
+Multi-chat support
+
+Markdown & code highlighting enhancements
+
+Contributions
+This is a personal project created for learning and portfolio purposes. External contributions are not accepted.
+
+License
+This project is licensed under the MIT License.
+
+Author
+Suryank B.Tech Student | Developer
